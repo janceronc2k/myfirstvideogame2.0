@@ -1,0 +1,87 @@
+@import "https://unpkg.com/open-props";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://wallpaperaccess.com/full/8062149.jpg") ;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-6¿7);
+  font-size: var(--font-size-8);
+  color: var(--yellow-8);
+  background: var(--black-0);
+  border: 0;
+  padding: var(--size-4) var(--size-8);
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.1s;
+  position: relative;
+}
+
+button:hover {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+}
+
+button:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-2) solid var(--gray-0);
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+  
+  --angle-one: 105deg;
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  
+  -webkit-mask: conic-gradient(
+    transparent 0 var(--start-one),
+    rgb(14, 12, 12) var(--start-one) var(--end-one),
+    transparent var(--end-one) var(--start-two),
+    rgb(24, 20, 20) var(--start-two) var(--end-two),
+    transparent var(--end-two)
+  );
+  
+          mask: conic-gradient(
+    transparent 0 var(--start-one),
+    rgb(240, 241, 234) var(--start-one) var(--end-one),
+    transparent var(--end-one) var(--start-two),
+    rgb(229, 230, 225) var(--start-two) var(--end-two),
+    transparent var(--end-two)
+  );
+  
+  z-index: -1;
+}
+.container{
+    
+    
+  width: 400px;
+  padding: 50px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 70%;
+  left: 50%;
+  box-shadow: 15px 30px 35px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}

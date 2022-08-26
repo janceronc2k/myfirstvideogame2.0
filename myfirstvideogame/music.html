@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Music Player | Audio Player 🎵</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./stylemusic.css" >
+
+</head>
+<body>
+  <div class="container">
+  
+<!-- partial:index.partial.html -->
+<!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
+
+<div id="app-cover">
+  <div id="bg-artwork"></div>
+  <div id="bg-layer"></div>
+  <div id="player">
+    <div id="player-track">
+      <div id="album-name"></div>
+      <div id="track-name"></div>
+      <div id="track-time">
+        <div id="current-time"></div>
+        <div id="track-length"></div>
+      </div>
+      <div id="s-area">
+        <div id="ins-time"></div>
+        <div id="s-hover"></div>
+        <div id="seek-bar"></div>
+      </div>
+    </div>
+    <div id="player-content">
+      <div id="album-art">
+        <img src="https://i.etsystatic.com/12154873/r/il/6bb00e/1343600794/il_fullxfull.1343600794_pxjn.jpg" class="active" id="_1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXi98xJQ4cjWNg8CBt5UC4KrW6dhbCX2F22jrAXeFRlcTak99-brbdeWGU7dyzInG906A&usqp=CAU" id="_2">
+        <img src="https://static.qobuz.com/images/covers/62/01/8030615040162_600.jpg" id="_3">
+        <img src="https://static.wikia.nocookie.net/daftpunk/images/7/71/Get_Lucky.jpg/revision/latest?cb=20140421225330&path-prefix=es" id="_4">
+        <img src="https://minotaur.agency/wp-content/uploads/2020/01/tatooine-rebellion_smaller2.jpg" id="_5">
+        <div id="buffer-box">Buffering ...</div>
+      </div>
+      <div id="player-controls">
+        <div class="control">
+          <div class="button" id="play-previous">
+            <i class="fas fa-backward"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-pause-button">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-next">
+            <i class="fas fa-forward"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./scriptmusic.js"></script>
+
+</body>
+</html>
